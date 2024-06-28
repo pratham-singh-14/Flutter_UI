@@ -60,8 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: SafeArea(
-          child: Expanded(
-        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -122,11 +120,11 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 height: 20,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Expanded(
+              Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: SingleChildScrollView(
-                  child: Column(
+                                    child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -164,13 +162,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       horizontalcard("assets/images/l1.jpg",
                           "Best Desigen"),
                     ],
-                  ),
-                )),
-              )
+                                    ),
+                                  ),
+                  ))
             ],
-          ),
-        ),
-      )),
+          )),
     );
   }
 
